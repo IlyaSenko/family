@@ -1,9 +1,9 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-// import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import GoogleLogo from 'assets/images/google.png'
 import FacebookLogo from 'assets/images/facebook.png'
-// import { loginThunk } from 'data/store/userData'
+import { loginThunk } from 'data/store/userData'
 import { Input, Button } from 'components'
 import {
   AuthorizeBackground,
@@ -17,11 +17,10 @@ import {
 
 export default function Login() {
   const { control, handleSubmit } = useForm()
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   const onSubmit = (data) => {
-    console.log(data)
-    // dispatch(loginThunk(data))
+    dispatch(loginThunk(data))
   }
 
   return (
