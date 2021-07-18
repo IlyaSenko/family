@@ -62,3 +62,9 @@ export const BottomLine = styled.div`
   position: absolute;
   bottom: 0;
 `
+
+export const Error = styled.p`
+  color: #e54f6e;
+  position: absolute;
+  bottom: -30px;
+`

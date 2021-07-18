@@ -16,7 +16,11 @@ import {
 } from 'styled/authorizeForm'
 
 export default function Login() {
-  const { control, handleSubmit } = useForm()
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
   const dispatch = useDispatch()
 
   const onSubmit = (data) => {
@@ -36,6 +40,7 @@ export default function Login() {
             label="Логін"
             placeholder="Введіть логін"
             rules={{ required: true }}
+            errors={errors.email}
           />
           <Input
             icon={['fas', 'lock']}
@@ -45,6 +50,7 @@ export default function Login() {
             placeholder="Введіть пароль"
             rules={{ required: true }}
             style={{ marginBottom: '1.5rem' }}
+            errors={errors.password}
           />
           <ForgotPassword>Забули пароль ?</ForgotPassword>
           <Button type="submit">Увійти</Button>

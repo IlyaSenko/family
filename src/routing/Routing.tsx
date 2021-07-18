@@ -15,7 +15,7 @@ function AuthRoute({
 }) {
   const isAuthenticated = useIsAuthenticated()
   if (isAuthenticated) {
-    if (path === LOGIN_ROUTE && REGISTER_ROUTE) {
+    if (path === LOGIN_ROUTE || path === REGISTER_ROUTE) {
       return <Redirect to={PROFILE_ROUTE} />
     }
     return (
@@ -24,7 +24,7 @@ function AuthRoute({
       </Route>
     )
   }
-  if (path === LOGIN_ROUTE && REGISTER_ROUTE) {
+  if (path === LOGIN_ROUTE || path === REGISTER_ROUTE) {
     return (
       <Route path={path} exact={exact}>
         {children}

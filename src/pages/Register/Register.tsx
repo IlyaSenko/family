@@ -32,7 +32,7 @@ export default function Register() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <Input
             control={control}
-            icon={['fa', 'user']}
+            icon={['fa', 'faCheckCircle']}
             name="surname"
             label="Прізвище"
             placeholder="Введіть прізвище"
@@ -40,7 +40,7 @@ export default function Register() {
           />
           <Input
             control={control}
-            icon={['fa', 'user']}
+            icon={['fa', 'faCheckCircle']}
             name="name"
             label="Логін"
             placeholder="Введіть логін"
